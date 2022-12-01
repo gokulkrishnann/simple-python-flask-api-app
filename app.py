@@ -13,8 +13,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////' + \
     os.path.join(basedir, 'employees.db')
 app.config['JWT_SECRET_KEY'] = 'dev@123'
 app.config['MAIL_SERVER'] = 'smtp.mailtrap.io'
-app.config['MAIL_USERNAME'] = 'e5072aa7fe44c0'
-app.config['MAIL_PASSWORD'] = '55144b23712606'
+app.config['MAIL_USERNAME'] = os.environ['MAIL_USERNAME']
+app.config['MAIL_PASSWORD'] = os.environ['MAIL_PASSWORD']
 
 
 db = SQLAlchemy(app)
